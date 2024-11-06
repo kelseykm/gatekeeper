@@ -1,0 +1,6 @@
+[security]
+API_KEY = ""
+
+[users.exceptions]
+crooks = [] # list[str]
+niceys = [] # list[str]
