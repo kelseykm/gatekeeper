@@ -50,8 +50,8 @@ Here's the structure you should follow:
 API_KEY = ""  # Replace with your GitHub API Key
 
 [users.exceptions]
-crooks = []  # List of users you're following but aren't following you back
-niceys = []  # List of users following you but you aren't following back
+crooks = [] 
+niceys = [] 
 ```
 
 - The `API_KEY` field should be filled with your GitHub Personal Access Token. You can create one on GitHub [here](https://github.com/settings/tokens).
@@ -135,7 +135,7 @@ options:
     python run.py --list_niceys
     ```
 
-6. **Follow all users that you are following but aren't following you back**:
+6. **Follow all users that are following you but you aren't following them back**:
 
     ```bash
     python run.py --follow_niceys
