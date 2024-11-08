@@ -5,6 +5,7 @@
 ### **Fixes**
 
 - Make references to relative paths more robust by using `pathlib` and `os.path`
+- Correct type hints for `get_all_followers_logins` and `get_all_following_logins`
 
 ## [0.1.0] - 2024-11-07
 
