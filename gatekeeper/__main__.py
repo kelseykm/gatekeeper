@@ -2,12 +2,17 @@ from .arguments import main as arguments
 from .followers import get_all_followers_logins
 from .following import get_all_following_logins, follow_users, unfollow_users
 import tomllib
+from pathlib import Path
+import os.path
+
+current_file_path = Path(__file__)
+config_file_path = os.path.join(current_file_path.parent.parent, "config.toml")
 
 
 def get_crooks_logins(all_followers_logins: list['str'], all_following_logins: list[str]) -> list[str]:
     crooks = set(all_following_logins).difference(all_followers_logins)
 
-    with open("./config.toml", "rb") as config_file:
+    with open(config_file_path, "rb") as config_file:
         config = tomllib.load(config_file)
 
     crook_exceptions = config["users"]["exceptions"]["crooks"]
@@ -20,7 +25,7 @@ def get_crooks_logins(all_followers_logins: list['str'], all_following_logins: l
 def get_niceys_logins(all_followers_logins: list['str'], all_following_logins: list[str]) -> list[str]:
     niceys = set(all_followers_logins).difference(all_following_logins)
 
-    with open("./config.toml", "rb") as config_file:
+    with open(config_file_path, "rb") as config_file:
         config = tomllib.load(config_file)
 
     niceys_exceptions = config["users"]["exceptions"]["niceys"]
