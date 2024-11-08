@@ -10,7 +10,7 @@ headers = {
 }
 
 
-def get_all_followers_logins() -> list[dict[str, str | int]]:
+def get_all_followers_logins() -> list[str]:
     all_followers = []
 
     # initial conditions
