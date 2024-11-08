@@ -1,5 +1,11 @@
 # Changelog
 
+## [0.1.1] - 2024-11-09
+
+### **Fixes**
+
+- Make references to relative paths more robust by using `pathlib` and `os.path`
+
 ## [0.1.0] - 2024-11-07
 
 - Initial release of the `Gatekeeper` Python script.
